@@ -1,0 +1,18 @@
+
+#Track IDs
+54342	Online Software Engineering Structured
+59882	Full Stack Web Development V8
+44577	Bootcamp Prep v2
+62141	PREWORK Software Engineering
+63450	Module 1 Web Development Immersive 3 0
+50224	Module 1 Gap Web Development Immersive 3 0
+25055	Module 2 Web Development Immersive 2 0
+53275	Module 3 Web Development Immersive 3 1
+42492	Module 4 Web Development Immersive 2 1
+16611	Career Prep
+27682	Computer Science
+12705	Project Euler
+53045	Sec Development
+
+#API link
+https://learn.co/api/v1/tracks/
