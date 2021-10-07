@@ -17,6 +17,12 @@ parser.add_option("-f", "--filename", dest="filename", action="store_true", help
 if len(args) < 1:
     print("We require a track (Integer) id as argument")
     sys.exit()
+    
+if args[1]:
+    filename = f'output/{args[1]}'
+    print(filename)
+else:
+    filename = "output/data.md"
 
 # Query JSON endpoint
 url = "https://learn.co/api/v1/tracks/" + args[0]
@@ -64,7 +70,7 @@ try:
     content = urllib.request.urlopen(url).read()
     struc = json.loads(content)
     if options.filename:
-        bulletify(struc, filename=args[1])
+        bulletify(struc, filename=filename)
     else:
         bulletify(struc)
 except urllib.error.HTTPError as err:
