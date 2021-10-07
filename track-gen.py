@@ -17,8 +17,8 @@ parser.add_option("-f", "--filename", dest="filename", action="store_true", help
 if len(args) < 1:
     print("We require a track (Integer) id as argument")
     sys.exit()
-    
-if args[1]:
+
+if len(args) == 2:
     filename = f'output/{args[1]}'
     print(filename)
 else:
@@ -51,7 +51,7 @@ def parse_obj_json(obj, output):
             output["children"] = sorted(output["children"], key=lambda x: x["title"])
     return output
 
-def bulletify(obj, indent=0, filename="output/output.md"):
+def bulletify(obj, indent=0, filename=filename):
     if "children" in obj:
         if type(obj["children"]) is list and len(obj["children"]) > 0:
             writer = open(filename,'a')
