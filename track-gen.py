@@ -13,7 +13,6 @@ parser = OptionParser()
 parser.add_option("-f", "--filename", dest="filename", action="store_true", help="Export track as Markdown-friendly bullet list and save to file.")
 (options, args) = parser.parse_args()
 
-# Ensure track ID
 if len(args) < 1:
     print("We require a track (Integer) id as argument")
     sys.exit()
